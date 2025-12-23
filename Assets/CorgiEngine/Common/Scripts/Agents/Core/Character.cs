@@ -273,9 +273,10 @@ namespace MoreMountains.CorgiEngine
 			}
 			_damageOnTouch = this.gameObject.GetComponent<DamageOnTouch>();
 			CanFlip = true;
-			AssignAnimator();           
+			AssignAnimator();
 
-			_originalGravity = _controller.Parameters.Gravity;		
+			if (_controller != null)
+				_originalGravity = _controller.Parameters.Gravity;		
 
 			ForceSpawnDirection ();
 		}
