@@ -8,6 +8,10 @@ public class TestDash : CharacterDash
     [SerializeField] private Character _characterNavigation;
 
 
+    private void Awake()
+    {
+        _overridedController = GetComponentInParent<CorgiController>();
+    }
     protected override void Initialization()
     {
         base.Initialization();
@@ -23,7 +27,7 @@ public class TestDash : CharacterDash
         {
             _character.IsFacingRight = _characterNavigation.IsFacingRight;
 
-            Debug.Log(_character.IsFacingRight);
+            //Debug.Log(_character.IsFacingRight);
         }
     }
 }

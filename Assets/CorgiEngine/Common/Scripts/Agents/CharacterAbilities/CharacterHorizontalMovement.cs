@@ -254,8 +254,8 @@ namespace MoreMountains.CorgiEngine
 
 			// if we're grounded, jumping but not moving up, we become idle
 			if ((_controller.State.IsGrounded)
-			    && (_movement.CurrentState == CharacterStates.MovementStates.Jumping)
-			    && (_controller.TimeAirborne >= _character.AirborneMinimumTime))
+			    && (_movement.CurrentState == CharacterStates.MovementStates.Jumping))
+			    //&& (_controller.TimeAirborne >= _character.AirborneMinimumTime))
 			{
 				_movement.ChangeState(CharacterStates.MovementStates.Idle);
 			}

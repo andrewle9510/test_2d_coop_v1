@@ -219,6 +219,7 @@ MonoBehaviour:
   AutoAttributePlayerIDs: 1
   SceneCharacters:
   - {fileID: 1057336922}
+  - {fileID: 218021838}
   DebugSpawn: {fileID: 1132044354}
   CheckpointAttributionAxis: 0
   CheckpointAttributionDirection: 0
@@ -521,7 +522,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218021836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43de057a10096a4ba3074b4c372ce8f, type: 3}
   m_Name: 
@@ -532,7 +533,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  NumberOfJumps: 2
+  NumberOfJumps: 1
   JumpHeight: 3.025
   JumpRestrictions: 2
   ResetCameraOffsetOnJump: 0
@@ -549,7 +550,7 @@ MonoBehaviour:
   AirJumpFeedbacks: {fileID: 0}
   DoubleJumpFeedbacks: {fileID: 0}
   NumberOfJumpsLeft: 0
-  _overridedController: {fileID: 2035794435}
+  _overridedController: {fileID: 0}
 --- !u!114 &218021841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,6 +1060,7 @@ GameObject:
   - component: {fileID: 1057336924}
   - component: {fileID: 1057336926}
   - component: {fileID: 1057336925}
+  - component: {fileID: 1057336927}
   m_Layer: 0
   m_Name: player1_controller
   m_TagString: Untagged
@@ -1198,13 +1200,14 @@ MonoBehaviour:
   WallJumpForce: {x: 10, y: 4}
   ForceMode: 0
   ForceFlipTowardsDirection: 0
-  ShouldReduceNumberOfJumpsLeft: 1
+  ShouldReduceNumberOfJumpsLeft: 0
   LimitNumberOfWalljumps: 0
   MaximumNumberOfWalljumps: 3
   NumberOfWalljumpsLeft: 0
   AllowCoyoteTime: 0
   CoyoteTimeDuration: 0.2
   _overridedController: {fileID: 2035794435}
+  _characterNavigation: {fileID: 0}
 --- !u!114 &1057336926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,6 +1232,43 @@ MonoBehaviour:
   ResetVerticalForceOnEntry: 1
   InputIndependent: 0
   _overridedController: {fileID: 2035794435}
+  _characterNavigation: {fileID: 0}
+--- !u!114 &1057336927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057336918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43de057a10096a4ba3074b4c372ce8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestJump
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
+  NumberOfJumps: 1
+  JumpHeight: 3.025
+  JumpRestrictions: 2
+  ResetCameraOffsetOnJump: 0
+  CanJumpDownOneWayPlatforms: 1
+  FixedAerialJumpCount: 0
+  JumpIsProportionalToThePressTime: 1
+  JumpMinimumAirTime: 0.1
+  JumpReleaseForceFactor: 2
+  CoyoteTime: 0
+  InputBufferDuration: 0.2
+  OneWayPlatformsJumpCollisionOffDuration: 0.3
+  MovingOneWayPlatformsJumpCollisionOffDuration: 0.2
+  MovingPlatformsJumpCollisionOffDuration: 0.05
+  AirJumpFeedbacks: {fileID: 0}
+  DoubleJumpFeedbacks: {fileID: 0}
+  NumberOfJumpsLeft: 0
+  _overridedController: {fileID: 0}
 --- !u!1 &1072031669
 GameObject:
   m_ObjectHideFlags: 0
