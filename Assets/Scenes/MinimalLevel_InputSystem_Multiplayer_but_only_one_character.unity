@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 218021838}
   - component: {fileID: 218021840}
   - component: {fileID: 218021841}
+  - component: {fileID: 218021842}
   m_Layer: 0
   m_Name: player2_controller
   m_TagString: Untagged
@@ -578,6 +579,48 @@ MonoBehaviour:
   JetpackRefueledSfx: {fileID: 0}
   JetpackFuelDurationLeft: 0
   _overridedController: {fileID: 2035794435}
+--- !u!114 &218021842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218021836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406256c25bec4c643b5d86f265a93c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestDash
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
+  DashDistance: 3
+  DashForce: 20
+  ResetForcesOnExit: 0
+  ForceExactDistance: 0
+  DetachFromMovingPlatformsOnDash: 0
+  Aim:
+    AimControl: 2
+    RotationMode: 0
+    MinimumAngle: -180
+    MaximumAngle: 180
+    CurrentAngle: 0
+  MinimumInputThreshold: 0.1
+  FlipCharacterIfNeeded: 1
+  AutoCorrectTrajectory: 1
+  DashDirectionMinThreshold: 0.1
+  DashCooldown: 1
+  LimitedDashes: 0
+  SuccessiveDashAmount: 1
+  SuccessiveDashesLeft: 1
+  SuccessiveDashResetMethod: 0
+  SuccessiveDashResetDuration: 2
+  InvincibleWhileDashing: 0
+  _overridedController: {fileID: 2035794435}
+  _characterNavigation: {fileID: 1057336922}
 --- !u!4 &420936718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408230, guid: ce0837de5d2b5d140aea3195484dca8a,
@@ -1013,7 +1056,6 @@ GameObject:
   - component: {fileID: 1057336921}
   - component: {fileID: 1057336922}
   - component: {fileID: 1057336923}
-  - component: {fileID: 1057336924}
   m_Layer: 0
   m_Name: player1_controller
   m_TagString: Untagged
@@ -1106,47 +1148,6 @@ MonoBehaviour:
   TouchTheGroundFeedback: {fileID: 0}
   MinimumAirTimeBeforeFeedback: 0.2
   StopWalkingWhenCollidingWithAWall: 0
-  _overridedController: {fileID: 2035794435}
---- !u!114 &1057336924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057336918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 406256c25bec4c643b5d86f265a93c8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestDash
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  DashDistance: 3
-  DashForce: 20
-  ResetForcesOnExit: 1
-  ForceExactDistance: 0
-  DetachFromMovingPlatformsOnDash: 0
-  Aim:
-    AimControl: 2
-    RotationMode: 0
-    MinimumAngle: -180
-    MaximumAngle: 180
-    CurrentAngle: 0
-  MinimumInputThreshold: 0.1
-  FlipCharacterIfNeeded: 1
-  AutoCorrectTrajectory: 1
-  DashDirectionMinThreshold: 0.1
-  DashCooldown: 1
-  LimitedDashes: 0
-  SuccessiveDashAmount: 1
-  SuccessiveDashesLeft: 1
-  SuccessiveDashResetMethod: 0
-  SuccessiveDashResetDuration: 2
-  InvincibleWhileDashing: 0
   _overridedController: {fileID: 2035794435}
 --- !u!1 &1072031669
 GameObject:
@@ -7517,7 +7518,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -7603,7 +7604,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: PlayerControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
